@@ -1,0 +1,47 @@
+*, *::before, *::after {
+  box-sizing: border-box
+}
+body{
+  margin: 0;
+  background-image: linear-gradient(to right,rgb(216, 0, 137),rgb(5, 166, 206));
+  /* background-color: aquamarine; */
+}
+.app{
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4,6rem);
+  grid-template-rows: minmax(7rem,auto) repeat(5,6rem);
+  justify-content: center;
+
+}
+.app button{
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.app button:hover, .app button:focus{
+  background-color: white;
+}
+.span-two{
+  grid-column: span 2;
+}
+.output{
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.63);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .precious_operand{
+  color: blanchedalmond;
+}
+.output .current_operand {
+  color: white;
+  font-size: 2.5rem;;
+}
